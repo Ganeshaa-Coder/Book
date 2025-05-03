@@ -17,7 +17,7 @@ def add_book(title, author):
     books = load_books()
     books.append({"title": title, "author": author, "status": "unread"})
     save_books(books)
-    print(f"📚 Added: {title} by {author}")
+    print(f" Added: {title} by {author}")
 
 def list_books():
     books = load_books()
@@ -32,7 +32,7 @@ def mark_as_read(index):
     if 0 <= index < len(books):
         books[index]["status"] = "read"
         save_books(books)
-        print(f"✅ Marked '{books[index]['title']}' as read.")
+        print(f" Marked '{books[index]['title']}' as read.")
     else:
         print("Invalid book index.")
 
